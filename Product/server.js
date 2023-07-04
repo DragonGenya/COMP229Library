@@ -2,7 +2,7 @@ const express = require("express");
 
 const cors = require("cors");
 
- 
+const cookieSession = require("cookie-session");
 
 const app = express();
 
@@ -36,11 +36,10 @@ db.mongoose
 
  
 
+/* In server.js */
 var corsOptions = {
-
-  origin: "http://localhost:3001"
-
-};
+  origin: ["http://localhost:3001"],
+  credentials: true}
 
  
 
@@ -58,7 +57,12 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
- 
+app.use(
+  cookieSession({
+  name: "that-session",
+  secret: "COOKIE_SECRET", // should use as secret environment variable
+  httpOnly: true
+  }));
 
 // simple route
 

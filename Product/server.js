@@ -70,7 +70,7 @@ app.use(
 
 app.get("/", (req, res) => {
 
-  res.json({ message: "Welcome to Sportstore application." });
+  res.json({ message: "Welcome to Library application." });
 
 });
 

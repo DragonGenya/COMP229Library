@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Product } from '../models/product.model';
-const baseUrl = 'http://localhost:3000/api/products';
+
+//const baseUrl = 'http://localhost:3000/api/products';
+const baseUrl = 'https://boba-library.onrender.com/api/products';
+
 @Injectable({
 providedIn: 'root'
 })

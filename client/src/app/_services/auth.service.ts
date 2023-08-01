@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 
  
 
-const AUTH_API = 'http://localhost:3000/api/auth/';
-
+//const AUTH_API = 'http://localhost:3000/api/auth/';
+const AUTH_API = 'https://boba-library.onrender.com/api/auth/';
  
 
 const httpOptions = {
